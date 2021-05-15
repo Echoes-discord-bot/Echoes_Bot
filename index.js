@@ -11,4 +11,3 @@ require('dotenv').config();
 
 client.once('ready', () => {
 	console.log('Ready!');
-	

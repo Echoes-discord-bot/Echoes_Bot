@@ -27,9 +27,6 @@ client.on('message', message => {
 
 });
 
-fs.createReadStream("./stats.csv").pipe(parser);
-
-
 //login
 client.login(process.env.TOKEN);
 

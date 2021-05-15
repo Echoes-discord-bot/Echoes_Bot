@@ -14,7 +14,7 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-	if (!message.content.startsWith(prefix) || message.author.bot) return;
+	if (!message.content.startsWith(process.env.PREFIX) || message.author.bot) return;
 
 	const commandBody = message.content.slice(process.prefix.length)
 	const args = commandBody.trim().split(' ');

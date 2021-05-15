@@ -6,10 +6,10 @@ class Market {
     process(command, args, message) {
         if (command === "market") {
             if (!args.length) {
-                return message.channel.send("Please use the command in this format `!market <item>`, "+`${message.author}!`);}
+                return message.channel.send("Please use the command in this format `!market <item>`, "+`${message.author}!`);};
             const item = items.list.find(element => element.name.toLowerCase().indexOf(args.join(' ').toLowerCase()) !== -1);
 
-            if (!item) return message.channel.send(`Unable to find item on market, ${message.author}!`);;
+            if (!item) return message.channel.send(`Unable to find item on market, ${message.author}!`);
 
             fetch(`https://api.eve-echoes-market.com/market-stats/${item.item_id}`)
             .then(response => response.json())
